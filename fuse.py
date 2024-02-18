@@ -89,8 +89,9 @@ def disconnect_bluetooth_device(device_name, btcom_path, DEBUG=True):
     # https://bluetoothinstaller.com/bluetooth-command-line-tools/btcom.html
     
     # Command to disable the hands-free service (HFP) and the audio sink service (A2DP)
-    disable_hfp_cmd = r'{} -n "{}" -r -s111e'.format(btcom_path, device_name)
-    disable_a2dp_cmd = r'{} -n "{}" -r -s110b'.format(btcom_path, device_name)
+    disable_hfp_cmd = '"{}" -n "{}" -r -s111e'.format(btcom_path, device_name)
+    disable_a2dp_cmd = '"{}" -n "{}" -r -s110b'.format(btcom_path, device_name)
+
 
     try:
         # Execute the command to disable the HFP service
@@ -232,11 +233,10 @@ if __name__ == "__main__":
         exit()
 
     # # Uncomment this block to hard-code a handler for a single device as the default behavior:
-
     # device_name = "EDIFIER W820NB Plus"
     # max_inactivity = 60 # minutes
     # scan_interval =   5 # minutes
-    # btcom_path = "C:\Program Files (x86)\Bluetooth Command Line Tools\bin\btcom"
+    # btcom_path = "C:/Program Files (x86)/Bluetooth Command Line Tools/bin/btcom"
     
     # if(args.name == None):
     #     args.name = device_name
@@ -244,6 +244,8 @@ if __name__ == "__main__":
     #     args.threshold = max_inactivity
     # if (args.scan_interval == None):
     #     args.scan_interval = scan_interval
+    # if (args.btcom_path == None):
+    #     args.btcom_path = btcom_path
         
     # Check if all required arguments are provided or set
     if not args.name or not args.threshold or not args.scan_interval or not args.btcom_path:
