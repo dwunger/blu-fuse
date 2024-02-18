@@ -7,7 +7,9 @@ This Python script automatically disconnects a specified Bluetooth device after 
 - Python 3.6 or higher
 - Windows 10 or higher
 - Bluetooth Command Line Tools installed (for device disconnection)
-- `winrt` Python package (for monitoring media playback)
+- `winrt` Python package (for monitoring media playback)*
+
+* At the time of writing, `winrt` is no longer supported and may not be directly installable via pip for versions of Python beyond 3.7, you may need to manually install the package using a wheel file compatible with Python 3.7.
 
 ## Installation
 1. **Install Bluetooth Command Line Tools:**
@@ -48,7 +50,7 @@ This Python script automatically disconnects a specified Bluetooth device after 
 
 ## Notes
 - Ensure the Bluetooth device name exactly matches the name listed under Bluetooth devices in Windows.
-- The `btcom` path typically looks like `C:\Program Files (x86)\Bluetooth Command Line Tools\bin\btcom`.
+- The `btcom` path might look like `C:\Program Files (x86)\Bluetooth Command Line Tools\bin\btcom.exe`.
 
 ## Troubleshooting
 - If the device fails to disconnect, verify the correct device name and `btcom` path.
