@@ -48,7 +48,7 @@ This Python script automatically disconnects a specified Bluetooth device after 
 
 ## Notes
 - Ensure the Bluetooth device name exactly matches the name listed under Bluetooth devices in Windows.
-- The `btcom` path typically looks like `C:\Program Files (x86)\Bluetooth Command Line Tools\bin\btcom`.
+- The `btcom` path might look like `C:\Program Files (x86)\Bluetooth Command Line Tools\bin\btcom.exe`.
 
 ## Troubleshooting
 - If the device fails to disconnect, verify the correct device name and `btcom` path.
